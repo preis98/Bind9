@@ -1,0 +1,18 @@
+;
+; BIND data file for home.local 
+;
+$TTL	604800
+@	IN	SOA	srv-dns-01.home.local. root.home.local. (
+		     2023032201		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+	    		2419200		; Expire
+			     60 )	; Negative Cache TTL
+;
+@	IN	NS	srv-dns-01.home.local.
+
+; 192.168.100.0/26 - A Records
+srv-web-01.home.local.	IN	A	0.0.0.0 ;Webserver
+spielwiese.home.local.	IN	A	0.0.0.0 ;Testserver
+jarvis.home.local.	    IN	A	0.0.0.0 ;Raspberry Pi 
+srv-dns-01.home.local.	IN	A	0.0.0.0 ;DNS-Server
